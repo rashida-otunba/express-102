@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends List</title>
+    ${head}
+</head>
+<body>
+
+    <h1>Test friends list </h1>
+    <ul> 
+        <!-- //controller and view enable this to work and render on the browser  -->
+        ${friends.map(friend =>` 
+            <!-- friends is the array; friend is the key value  -->
+            <li><a href="${path}/${friend.handle}">${friend.name}</a></li>
+            `).join('')}
+    </ul>
+<!-- all js in html MUST be in the cash curly -->
+</body>
+</html>
